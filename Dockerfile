@@ -1,7 +1,6 @@
-FROM golang as builder
+FROM ruby:2.5.3-alpine3.8
 
 ADD . /time-event-source
 WORKDIR /time-event-source
-RUN go build 
 
-ENTRYPOINT ["/time-event-source/time-event-source"]
+ENTRYPOINT ["ruby", "app.rb"]
