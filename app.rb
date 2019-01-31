@@ -14,7 +14,7 @@ opt_parser = OptionParser.new do |opt|
         options[:sink] = sink
     end
 
-    opt.on("-i", "--interval INTERVAL", "How often to send events (in seconds)") do |interval|
+    opt.on("-i", "--interval INTERVAL", "Poll frequency") do |interval|
         options[:interval] = interval.to_i
     end
 end
